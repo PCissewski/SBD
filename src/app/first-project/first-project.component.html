@@ -1,0 +1,9 @@
+<p>Add record</p>
+
+<input #box
+    type="text"
+    class="form-control"
+    (keyup.enter)="onEnter(box.value)">
+
+<p *ngIf="recordAdded">{{ name }} added!</p>
+<p *ngIf="emptyRecordWarning">{{ emptyRecordMessage }}</p>
