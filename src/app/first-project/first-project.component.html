@@ -3,7 +3,9 @@
 <input #box
     type="text"
     class="form-control"
+    value="e.g. Hans Kloss"
+    onfocus="this.value=''"
     (keyup.enter)="onEnter(box.value)">
 
 <p *ngIf="recordAdded">{{ name }} added!</p>
-<p *ngIf="emptyRecordWarning">{{ emptyRecordMessage }}</p>
+<p *ngIf="emptyRecordWarning">{{ recordMessageWarning }}</p>

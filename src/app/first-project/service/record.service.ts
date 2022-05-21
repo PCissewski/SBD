@@ -1,13 +1,7 @@
 import { Injectable } from "@angular/core";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpClient} from "@angular/common/http";
 
-const httpOptions = {
-    headers: new HttpHeaders({'Content-Type': 'application/json'})
-}
-
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 
 export class RecordService {
     url: string = "https://localhost:7064/Record?record="
@@ -16,10 +10,10 @@ export class RecordService {
 
     postAddRecord(postData: string){
         console.log("To add record: " + postData);
-        return this.http.post(`${this.url+postData}`, postData, httpOptions).subscribe(responseData => {
-            console.log(responseData);
+        return this.http.post(`${this.url+postData}`, {observe: 'response'})
+        .subscribe(response => {
+            console.log(response)
         });
+        
     }
-
-    
 }
