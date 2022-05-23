@@ -10,13 +10,15 @@ import { FirstProjectComponent } from './first-project/first-project.component';
 import { RecordService } from './first-project/service/record.service';
 import { ErrorHandlingComponent } from './error-handling/error-handling.component';
 import { SecondProjectComponent } from './second-project/second-project.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstProjectComponent,
     SecondProjectComponent,
-    ErrorHandlingComponent
+    ErrorHandlingComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
