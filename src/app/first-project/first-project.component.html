@@ -10,17 +10,34 @@
     onfocus="this.value=''"
     (keyup.enter)="onEnter(box.value)">
 
+
+    <div class="form__group field">
+        <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+        <label for="name" class="form__label">Name</label>
+      </div>
+
+<form>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Enter record name</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter record">
+        <small id="emailHelp" class="form-text text-muted">e.g. Hans Kloss</small>
+      </div>
+</form>
+
 <p *ngIf="recordAdded">{{ name }} added!</p>
 <p *ngIf="emptyRecordWarning">{{ recordMessageWarning }}</p>
 
+<app-error-handling></app-error-handling>
+
 <p>Generate Records</p>
 
-<button>Generate Record</button>
+<button class="btn btn-primary btn-sm">Generate Records</button>
 
 <p>Initial Records:</p>
 
 <p>Tapes: </p>
 
-<button>Sort all</button>
+<button class="btn btn-primary btn-sm">Sort all</button>
 
-<button>Next step</button>
+<button class="btn btn-secondary btn-sm">Next step</button>
+
