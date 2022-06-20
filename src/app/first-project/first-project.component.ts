@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RecordComponent } from './record/record.component';
 import { RecordService } from './record/service/record.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class FirstProjectComponent implements OnInit {
   recordMessageWarning: string = "Invalid record format";
   emptyRecordWarning: boolean = false;
 
-  constructor(private myService: RecordService) { }
+  constructor(private recordComponent: RecordComponent) { }
 
   ngOnInit(): void {
   }
@@ -28,7 +29,7 @@ export class FirstProjectComponent implements OnInit {
       return;
     }
 
-    this.myService.postAddRecord(value);
+    this.recordComponent.addRecord(value);
 
     this.emptyRecordWarning = false;
     this.recordAdded = true;
