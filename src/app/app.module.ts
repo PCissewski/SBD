@@ -7,18 +7,18 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstProjectComponent } from './first-project/first-project.component';
-import { RecordService } from './first-project/service/record.service';
-import { ErrorHandlingComponent } from './error-handling/error-handling.component';
 import { SecondProjectComponent } from './second-project/second-project.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { RecordComponent } from './first-project/record/record.component';
+import { RecordService } from './first-project/record/service/record.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstProjectComponent,
     SecondProjectComponent,
-    ErrorHandlingComponent,
-    HomePageComponent
+    HomePageComponent,
+    RecordComponent
   ],
   imports: [
     BrowserModule,
