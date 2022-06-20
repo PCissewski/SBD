@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RecordService } from './service/record.service';
+import { RecordService } from './record/service/record.service';
 
 @Component({
   selector: 'app-first-project',

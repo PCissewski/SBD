@@ -1,37 +1,23 @@
+<div class="container">
 
-<h2>Polyphase merge sort</h2>
+  <p>Add record</p>
 
-<p>Add record</p>
+  <div class="form__group field">
+      <input #box type="input" class="form__field" placeholder="Name" name="name" id='name' 
+      required (keyup.enter)="onEnter(box.value)"/>
 
-<input #box
-    type="text"
-    class="form-control"
-    value="e.g. Hans Kloss"
-    onfocus="this.value=''"
-    (keyup.enter)="onEnter(box.value)">
-
-
-    <div class="form__group field">
-        <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
-        <label for="name" class="form__label">Name</label>
-      </div>
-
-<form>
-    <div class="form-group">
-        <label for="exampleInputEmail1">Enter record name</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter record">
-        <small id="emailHelp" class="form-text text-muted">e.g. Hans Kloss</small>
-      </div>
-</form>
+      <label for="name" class="form__label">Record</label>
+  </div>
 
 <p *ngIf="recordAdded">{{ name }} added!</p>
-<p *ngIf="emptyRecordWarning">{{ recordMessageWarning }}</p>
 
-<app-error-handling></app-error-handling>
+<p *ngIf="emptyRecordWarning">{{ recordMessageWarning }}</p>
 
 <p>Generate Records</p>
 
 <button class="btn btn-primary btn-sm">Generate Records</button>
+
+</div>
 
 <p>Initial Records:</p>
 
@@ -40,4 +26,3 @@
 <button class="btn btn-primary btn-sm">Sort all</button>
 
 <button class="btn btn-secondary btn-sm">Next step</button>
-
