@@ -8,7 +8,6 @@ namespace SBD.Controllers;
 public class RecordController : ControllerBase
 {
     private Record? _record;
-    private TestFileGenerator? _testFileGenerator = new ();
     [HttpPost]
     public IEnumerable<string> Post(string record)
     {
