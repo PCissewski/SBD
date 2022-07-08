@@ -2,5 +2,5 @@
 
 public class Record
 {
-    private string? _person;
+    private string? _person { get; set; }
 }
